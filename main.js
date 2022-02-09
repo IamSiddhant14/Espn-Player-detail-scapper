@@ -21,7 +21,7 @@ function cb( err , responce , html ){//Here responce reffers to the responce cod
 
 function extractLink(html){
 
-    let $ = cheerio.load(html);//Loaded all the functionality of cheerio in "$" and now could also be accessed by by "$" itself
+    let $ = cheerio.load(html);//Loaded all the functionality and html of cheerio in "$" and now could also be accessed by by "$" itself
     let anchorElem = $('a[data-hover="View All Results"]');//finding the veiw all result tag
 
     let link = anchorElem.attr('href');//.attr refers to attribute
@@ -31,4 +31,28 @@ function extractLink(html){
     console.log(fullLink);
 
 
+    getAllMAtchLink(fullLink);
+
+}
+
+function getAllMAtchLink(uri){
+
+    request( uri , function(error , responce , html ){
+        if( error ){
+           console.error(error);
+        }else{
+           extractAllLink(html);
+        }
+    })
+}
+
+function extractAllLink(html){
+    let $ = cheerio.load(html);
+    let scoreCardArr = $('a[data-hover="Scorecard"]');
+
+    for(let i = 0; i < scoreCardArr.length ; i++ ){
+         let link = $(scoreCardArr[i]).attr('href');//Since here "scoreCardArr[i]" is variable in nature therefore surrounding it with '' is not required .
+         let fullLink = 'https://www.espncricinfo.com/'+link;
+         console.log( fullLink );
+    }
 }
