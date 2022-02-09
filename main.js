@@ -25,10 +25,10 @@ function extractLink(html){
     let anchorElem = $('a[data-hover="View All Results"]');//finding the veiw all result tag
 
     let link = anchorElem.attr('href');//.attr refers to attribute
-    console.log(link);//finding the link
+    // console.log(link);//finding the link
 
     let fullLink = 'https://www.espncricinfo.com/'+link;
-    console.log(fullLink);
+    // console.log(fullLink);
 
 
     getAllMAtchLink(fullLink);
@@ -53,6 +53,49 @@ function extractAllLink(html){
     for(let i = 0; i < scoreCardArr.length ; i++ ){
          let link = $(scoreCardArr[i]).attr('href');//Since here "scoreCardArr[i]" is variable in nature therefore surrounding it with '' is not required .
          let fullLink = 'https://www.espncricinfo.com/'+link;
-         console.log( fullLink );
+        //  console.log( fullLink );
+         
+        getVenueAndResult(fullLink);
+        // getDate(fullLink);
+        // getWinner(fullLink);
     }
+}
+
+
+function getVenueAndResult(url){
+
+    request(url,function(error , responce , html ){
+        if( error ){
+            console.error( error);
+        }else{
+            VenueAndResult(html);
+        }
+    })
+
+}
+
+function VenueAndResult(html){
+
+    let $ = cheerio.load(html);
+    let venarr = $('.match-header-info.match-info-MATCH  .description');
+
+    for( let i =0; i < venarr.length ; i++){
+
+        let ven = $(venarr[i]).text().split(",");
+        console.log(ven[2]);//Date
+        console.log(ven[1]);//Venue
+         
+    }
+
+
+
+    let result = $('.event .status-text > span');
+
+    for( let i =0; i < result.length ; i++){
+
+        let r = $(result[i]).text();
+        console.log(r);
+         
+    }
+
 }
