@@ -38,7 +38,7 @@ function VenueAndResult(html){
          
     }
 
-}
+} 
 
 module.exports ={
     getVenAndRes: getVenueAndResult
