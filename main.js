@@ -18,11 +18,12 @@ function cb( err , responce , html ){//Here responce reffers to the responce cod
     }
 }
 
-// a[data-hover="View All Results"] - attribute selector
 
 function extractLink(html){
 
     let $ = cheerio.load(html);//Loaded all the functionality and html of cheerio in "$" and now could also be accessed by by "$" itself
+    
+    // a[data-hover="View All Results"] - attribute selector
     let anchorElem = $('a[data-hover="View All Results"]');//finding the veiw all result tag
 
     let link = anchorElem.attr('href');//.attr refers to attribute
@@ -51,7 +52,7 @@ function extractAllLink(html){
     let $ = cheerio.load(html);
     let scoreCardArr = $('a[data-hover="Scorecard"]');
 
-    for(let i = 0; i < 1 ; i++ ){
+    for(let i = 0; i < scoreCardArr.length ; i++ ){
          let link = $(scoreCardArr[i]).attr('href');//Since here "scoreCardArr[i]" is variable in nature therefore surrounding it with '' is not required .
          let fullLink = 'https://www.espncricinfo.com/'+link;
         //  console.log( fullLink );
