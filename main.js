@@ -51,7 +51,7 @@ function extractAllLink(html){
     let $ = cheerio.load(html);
     let scoreCardArr = $('a[data-hover="Scorecard"]');
 
-    for(let i = 0; i < scoreCardArr.length ; i++ ){
+    for(let i = 0; i < 1 ; i++ ){
          let link = $(scoreCardArr[i]).attr('href');//Since here "scoreCardArr[i]" is variable in nature therefore surrounding it with '' is not required .
          let fullLink = 'https://www.espncricinfo.com/'+link;
         //  console.log( fullLink );
