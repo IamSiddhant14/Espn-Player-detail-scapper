@@ -38,8 +38,19 @@ function VenueAndResult(html){
          
     }
 
+    let innings = $('.card.content-block.match-scorecard-table>.Collapsible')//Brings the stats table of the selected team
+
+    let htmlString = '';
+
+    for( let i =0; i<innings.length ; i++ ){
+        htmlString += $(innings[i]).html();
+    }
+
+    console.log(htmlString)
 } 
 
 module.exports ={
     getVenAndRes: getVenueAndResult
 }
+
+  
