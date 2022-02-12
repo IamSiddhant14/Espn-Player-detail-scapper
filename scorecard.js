@@ -43,7 +43,22 @@ function VenueAndResult(html){
     let htmlString = '';
 
     for( let i =0; i<innings.length ; i++ ){
+
         htmlString += $(innings[i]).html();
+
+        let teamName = $(innings[i]).find("h5").text();
+        teamName = teamName.split('INNINGS')[0].trim();
+
+        // console.log(teamName);
+
+        let opponentindex = i == 0 ? 1 : 0;
+
+        let opponentName = $(innings[opponentindex]).find('h5').text();
+        opponentName = opponentName.split('INNINGS')[0].trim();
+
+        console.log(teamName , opponentName);
+
+
     }
 
     console.log(htmlString)
@@ -53,4 +68,3 @@ module.exports ={
     getVenAndRes: getVenueAndResult
 }
 
-  
