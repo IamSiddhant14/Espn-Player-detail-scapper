@@ -1,3 +1,6 @@
+// .find -- Find the particular element sectors
+// .hasClass -- return true or false accordingly
+
 const cheerio = require('cheerio');
 const request = require('request');
 

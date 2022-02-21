@@ -24,7 +24,7 @@ function extractLink(html){
     let $ = cheerio.load(html);//Loaded all the functionality and html of cheerio in "$" and now could also be accessed by by "$" itself
     
     // a[data-hover="View All Results"] - attribute selector
-    let anchorElem = $('a[data-hover="View All Results"]');//finding the veiw all result tag
+    let anchorElem = $('a[data-hover="View All Results"]');//finding the veiw all result tag,attribute tag
 
     let link = anchorElem.attr('href');//.attr refers to attribute
     // console.log(link);//finding the link
