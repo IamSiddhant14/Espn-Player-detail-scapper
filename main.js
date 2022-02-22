@@ -7,6 +7,8 @@ const cheerio = require('cheerio');
 const request = require('request');
 const getVAndR = require('./scorecard');
 
+
+
 request(url ,cb );
 
 function cb( err , responce , html ){//Here responce reffers to the responce code like 404 , 200  etc.

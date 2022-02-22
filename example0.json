@@ -1,0 +1,23 @@
+[
+    {
+        "object1 In JSON ": 1,
+        "comment0": " JSON - javascript object notation",
+        "comment1": "Every comment key should be in double quotes",
+        "comment2": "Here in a json file we could not add comment so we will add comments also in key value pair",
+        "comment 3": "The key in json file could contain space unlike in case of an object",
+        "comment4": "When in an json file we want multiple object then in that case we will be putting that objects in an array"
+
+    },
+    {
+
+        "object2 In JSON ": 2,
+        "comment4.1": "When in an json file we want multiple object then in that case we will be putting that objects in an array"
+
+    },
+    {
+
+        "object3 In JSON ": 3,
+        "comment5": "Adding a new object in json using an array's 'push'operation as we know that we can push multiple object in an array conayining objects "
+
+    }
+]

@@ -1,27 +1,66 @@
 [
     {
-        "object1 In JSON ": 1,
-        "comment0": " JSON - javascript object notation",
-        "comment1": "Every comment key should be in double quotes",
-        "comment2": "Here in a json file we could not add comment so we will add comments also in key value pair",
-        "comment 3": "The key in json file could contain space unlike in case of an object",
-        "comment4": "When in an json file we want multiple object then in that case we will be putting that objects in an array",
-        "name": "Steve",
-        "last Name": "Rogers",
-        "isAvenger": true,
-        "friends": [
-            "Tony",
-            "Peter",
-            "Bruce"
-        ],
-        "age": 102,
-        "address": {
-            "city": "Brooklyn",
-            "state": "New York"
-        }
+      "name": "Steve",
+      "last Name": "Rogers",
+      "isAvenger": true,
+      "friends": ["Tony", "Peter", "Bruce"],
+      "age": 102,
+      "address": { "city": "Brooklyn", "state": "New York" }
     },
     {
-        "object2 In JSON ": 2,
-        "comment4.1": "When in an json file we want multiple object then in that case we will be putting that objects in an array"
+      "name": "Tony",
+      "last Name": "Stark",
+      "isAvenger": true,
+      "friends": ["Steve", "Peter", "Bruce"],
+      "age": 40,
+      "address": { "city": "Brooklyn", "state": "New York" }
+    },
+    {
+      "name": "Peter",
+      "last Name": "Parker",
+      "isAvenger": true,
+      "friends": ["Steve", "Tony", "Bruce"],
+      "age": 17,
+      "address": { "city": "Brooklyn", "state": "New York" }
+    },
+    {
+      "name": "Thor",
+      "last Name": "Odinson",
+      "isAvenger": true,
+      "friends": ["Tony", "Peter", "Bruce"],
+      "age": 102,
+      "address": { "planet": "Asgard" }
+    },
+    {
+      "name": "Thor",
+      "last Name": "Odinson",
+      "isAvenger": true,
+      "friends": ["Tony", "Peter", "Bruce"],
+      "age": 102,
+      "address": { "planet": "Asgard" }
+    },
+    {
+      "name": "Thor",
+      "last Name": "Odinson",
+      "isAvenger": true,
+      "friends": ["Tony", "Peter", "Bruce"],
+      "age": 102,
+      "address": { "planet": "Asgard" }
+    },
+    {
+      "name": "Thor",
+      "last Name": "Odinson",
+      "isAvenger": true,
+      "friends": ["Tony", "Peter", "Bruce"],
+      "age": 102,
+      "address": { "planet": "Asgard" }
+    },
+    {
+      "name": "Thor",
+      "last Name": "Odinson",
+      "isAvenger": true,
+      "friends": ["Tony", "Peter", "Bruce"],
+      "age": 102,
+      "address": { "planet": "Asgard" }
     }
-]
+  ]
