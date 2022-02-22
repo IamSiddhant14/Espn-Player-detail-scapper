@@ -1,7 +1,8 @@
 //npm init
 //npm install cheerio request 
 
-const url = "https://www.espncricinfo.com/series/ipl-2020-21-1210595";
+// const url = "https://www.espncricinfo.com/series/ipl-2020-21-1210595";
+const url = process.argv[2];
 
 const cheerio = require('cheerio');
 const request = require('request');
