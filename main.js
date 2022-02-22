@@ -10,7 +10,6 @@ const fs = require('fs');
 const path = require('path');
 
 let iplPath = path.join(__dirname,"IPL");
-dirCreator(iplPath);
 
 function dirCreator(filePath){
 
@@ -18,6 +17,8 @@ function dirCreator(filePath){
         fs.mkdirSync(filePath);
     }
 }
+
+dirCreator(iplPath);
 
 request(url ,cb );
 
